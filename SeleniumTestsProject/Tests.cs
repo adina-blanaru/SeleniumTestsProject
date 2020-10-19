@@ -1,7 +1,6 @@
 ﻿using NUnit.Framework;
 using SeleniumTestsProject.PageObjects;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace SeleniumTestsProject
 {
@@ -9,17 +8,23 @@ namespace SeleniumTestsProject
     class Tests:Hooks
     {
         [Test]  //marks the method as a test
-        public void MyFirstTest()
+        public void Autentificare()
         {
-            HomePage myPage = new HomePage(Driver);
-            myPage.AutentificareButton.Click();
+            HomePage homePage = new HomePage(Driver);
+            homePage.AutentificareButton.Click();
             
             Thread.Sleep(1000);
         }
 
         [Test]
-        public void MySecondTest()
+        public void Inscriere()
         {
+            HomePage homePage = new HomePage(Driver);
+            InscrierePage inscrierePage = new InscrierePage(Driver);
+
+            homePage.InscriereButton.Click();
+            inscrierePage.CreateAccount();
+
             Thread.Sleep(1000);
         }
 
