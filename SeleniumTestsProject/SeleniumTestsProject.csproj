@@ -65,6 +65,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Hooks.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\DemoQaFormPage.Actions.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\DemoQaTextBoxPage.Actions.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\DemoQaTextBoxPage.Locators.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\GooglePage.Actions.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\DemoQaFormPage.Locators.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\GooglePage.Locators.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\Helper.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\TeatruPage.Locators.cs" />
+    <Compile Include="Oct21_Tema28\PageObjects\TeatruPage.Actions.cs" />
     <Compile Include="PageObjects\LoginPage.Actions.cs" />
     <Compile Include="PageObjects\LoginPage.Locators.cs" />
     <Compile Include="PageObjects\HomePage.Actions.cs" />
@@ -72,12 +81,17 @@
     <Compile Include="PageObjects\InscrierePage.Locators.cs" />
     <Compile Include="PageObjects\InscrierePage.Actions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Oct21_Tema28\Tema28Oct21.cs" />
     <Compile Include="Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Oct21_Tema28\test-img.JPG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

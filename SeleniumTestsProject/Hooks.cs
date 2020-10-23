@@ -32,12 +32,5 @@ namespace SeleniumTestsProject
             Driver.Navigate().GoToUrl(pageUrl);
         }
 
-        public void scrollElementIntoView(IWebElement element)
-        {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
-            js.ExecuteScript("arguments[0].scrollIntoView();", element);
-        }
-
-
     }
 }
