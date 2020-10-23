@@ -17,7 +17,7 @@ namespace SeleniumTestsProject
             //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
 
             Driver.Manage().Window.Maximize();  //maximize window
-            Driver.Navigate().GoToUrl("http://demosite.casqad.org/");
+            //Driver.Navigate().GoToUrl("http://demosite.casqad.org/");
 
         }
 
@@ -26,6 +26,18 @@ namespace SeleniumTestsProject
         {
             Driver.Quit();
         }
+
+        public void NavigateToUrl(string pageUrl)
+        {
+            Driver.Navigate().GoToUrl(pageUrl);
+        }
+
+        public void scrollElementIntoView(IWebElement element)
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
+            js.ExecuteScript("arguments[0].scrollIntoView();", element);
+        }
+
 
     }
 }
