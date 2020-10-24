@@ -29,5 +29,10 @@ namespace SeleniumTestsProject.PageObjects
             Assert.IsTrue(elementToVerify.Displayed);            
         }
 
+        public void VerifyElementContainsText(IWebElement elementToVerify, string text)
+        {
+            Assert.IsTrue(elementToVerify.Text.Contains(text));
+        }
+
     }
 }

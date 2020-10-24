@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SeleniumTestsProject.PageObjects
 {
     partial class HomePage
@@ -11,6 +6,21 @@ namespace SeleniumTestsProject.PageObjects
         public void GoToAuthentication()
         {
             AutentificareButton.Click();
+        }
+
+        public void GoToSignUp()
+        {
+            InscriereButton.Click();
+        }
+
+        public void DisconnectUser()
+        {
+            DeconectareButton.Click();
+        }
+
+        public void VeziDetaliiProdus()
+        {
+            VeziDetaliiButton.Click();
         }
     }
 }

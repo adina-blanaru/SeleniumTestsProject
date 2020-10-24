@@ -28,19 +28,5 @@ namespace SeleniumTestsProject
             Thread.Sleep(1000);
         }
 
-        [Test]
-        public void Inscriere()
-        {
-            NavigateToUrl("http://demosite.casqad.org/");
-
-            HomePage homePage = new HomePage(Driver);
-            InscrierePage inscrierePage = new InscrierePage(Driver);
-
-            homePage.InscriereButton.Click();
-            inscrierePage.CreateAccount();
-
-            Thread.Sleep(1000);
-        }
-
     }
 }
