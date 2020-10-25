@@ -128,28 +128,83 @@ namespace SeleniumTestsProject
         //f.	Dati click pe fiecare meniu (orizontal).
         public void VerifyMenuNavigation()
         {
+            HomePage homePage = new HomePage(Driver);
+            LoginPage loginPage = new LoginPage(Driver);
 
+            //Arrange
+            NavigateToUrl(SiteUrl);
+
+            string[] menus = { "Laptopuri", "Telefoane", "Foto", "Carti", "Accesorii" };
+            foreach (var menu in menus)
+            {
+                //Act
+                homePage.GoToMenu(menu);
+                //Assert
+                loginPage.VerifyElementContainsText(homePage.CategoryLabel, menu);
+            }
         }
 
         [Test]
         //g.	Ca si admin, dati click pe buton de administrare.
         public void VerifyAdministrationSectionAsAdmin()
         {
+            HomePage homePage = new HomePage(Driver);
+            LoginPage loginPage = new LoginPage(Driver);
 
+            //Arrange
+            NavigateToUrl(SiteUrl);
+            homePage.GoToAuthentication();
+            loginPage.AuthenticateUser(AdminUser, AdminPassword);
+
+            //Act
+            homePage.GoToMenu("Administrare");
+
+            //Assert
+            loginPage.VerifyElementIsDisplayed(homePage.GetMenuElement("Site"));
         }
 
         [Test]
         //h.	Ca si admin, dati click pe buton de administrare si accesati meniul Utilizatori.
         public void VerifyUsersMenuAsAdmin()
         {
+            HomePage homePage = new HomePage(Driver);
+            LoginPage loginPage = new LoginPage(Driver);
+            UtilizatoriPage utilizatoriPage = new UtilizatoriPage(Driver);
 
+            //Arrange
+            NavigateToUrl(SiteUrl);
+            homePage.GoToAuthentication();
+            loginPage.AuthenticateUser(AdminUser, AdminPassword);
+
+            //Act
+            homePage.GoToMenu("Administrare");
+            homePage.GoToMenu("Utilizatori");
+
+            //Assert
+            loginPage.VerifyElementContainsText(utilizatoriPage.UsersTableHeader, "Email");
         }
 
         [Test]
         //i.	Ca si admin, dati click pe buton de administrare si accesati meniul Utilizatori, alegeti un utilizator si editati.
         public void VerifyEditUserAsAdmin()
         {
+            HomePage homePage = new HomePage(Driver);
+            LoginPage loginPage = new LoginPage(Driver);
+            UtilizatoriPage utilizatoriPage = new UtilizatoriPage(Driver);
 
+            //Arrange
+            NavigateToUrl(SiteUrl);
+            homePage.GoToAuthentication();
+            loginPage.AuthenticateUser(AdminUser, AdminPassword);
+            homePage.GoToMenu("Administrare");
+            homePage.GoToMenu("Utilizatori");
+
+            //Act
+            //utilizatoriPage.EditUser();  //edit first user
+            utilizatoriPage.EditUser(AdinaUser);  //edit specific user
+
+            //Assert
+            loginPage.VerifyElementContainsText(utilizatoriPage.SubmitButton, "Actualizează utilizator"); 
         }
     }
 }

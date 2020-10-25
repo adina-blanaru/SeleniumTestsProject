@@ -84,6 +84,8 @@
     <Compile Include="PageObjects\ProductPage.Locators.cs" />
     <Compile Include="PageObjects\SignUpPage.Locators.cs" />
     <Compile Include="PageObjects\SignUpPage.Actions.cs" />
+    <Compile Include="PageObjects\UtilizatoriPage.Locators.cs" />
+    <Compile Include="PageObjects\UtilizatoriPage.Actions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Oct21_Tema28\Oct21Tema28Tests.cs" />
     <Compile Include="Tests.cs" />
