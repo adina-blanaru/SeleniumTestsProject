@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using SeleniumTestsProject.Oct21_Tema28.PageObjects;
+using SeleniumTestsProject.PageObjects;
 
 namespace SeleniumTestsProject
 {

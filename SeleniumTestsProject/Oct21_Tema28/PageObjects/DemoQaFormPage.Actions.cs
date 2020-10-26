@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumTestsProject.PageObjects;
 using System.IO;
 using System.Reflection;
 using System.Threading;

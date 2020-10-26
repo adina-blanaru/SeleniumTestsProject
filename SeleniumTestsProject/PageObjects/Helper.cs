@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System.Threading;
 
-namespace SeleniumTestsProject.Oct21_Tema28.PageObjects
+namespace SeleniumTestsProject.PageObjects
 {
     class Helper
     {               

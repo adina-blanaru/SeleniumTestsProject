@@ -71,7 +71,7 @@
     <Compile Include="Oct21_Tema28\PageObjects\GooglePage.Actions.cs" />
     <Compile Include="Oct21_Tema28\PageObjects\DemoQaFormPage.Locators.cs" />
     <Compile Include="Oct21_Tema28\PageObjects\GooglePage.Locators.cs" />
-    <Compile Include="Oct21_Tema28\PageObjects\Helper.cs" />
+    <Compile Include="PageObjects\Helper.cs" />
     <Compile Include="Oct21_Tema28\PageObjects\TeatruPage.Locators.cs" />
     <Compile Include="PageObjects\CartPage.Actions.cs" />
     <Compile Include="PageObjects\CartPage.Locators.cs" />
