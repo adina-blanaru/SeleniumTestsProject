@@ -49,7 +49,6 @@ namespace SeleniumTestsProject
             productPage.AdaugaInCos();
 
             //Assert
-            Thread.Sleep(2000);
             loginPage.VerifyElementContainsText(loginPage.AlertMessage, "Pentru a efectua aceasta actiune, va rugam sa va autentificati");            
         }
 
