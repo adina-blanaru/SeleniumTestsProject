@@ -15,5 +15,10 @@ namespace SeleniumTestsProject.PageObjects
             InscriereButton.Click();
         }
 
+        public void FillInEmailField(string email)
+        {
+            EmailField.Clear();
+            EmailField.SendKeys(email);
+        }
     }
 }

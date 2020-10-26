@@ -189,6 +189,7 @@ namespace SeleniumTestsProject
         {
             HomePage homePage = new HomePage(Driver);
             LoginPage loginPage = new LoginPage(Driver);
+            SignUpPage signUpPage = new SignUpPage(Driver);
             UtilizatoriPage utilizatoriPage = new UtilizatoriPage(Driver);
 
             //Arrange
@@ -200,10 +201,16 @@ namespace SeleniumTestsProject
 
             //Act
             //utilizatoriPage.EditUser();  //edit first user
-            utilizatoriPage.EditUser(AdinaUser);  //edit specific user
+            utilizatoriPage.ClickEditUser(AdinaUser);  //edit specific user
+            signUpPage.FillInEmailField("edited@test.com");
+            utilizatoriPage.ClickActualizeazaUtilizator();
 
             //Assert
-            loginPage.VerifyElementContainsText(utilizatoriPage.SubmitButton, "Actualizează utilizator"); 
+            loginPage.VerifyElementContainsText(loginPage.AlertMessage, "The user has been successfully updated.");
+            
+            //Change email back to initial value
+            signUpPage.FillInEmailField(AdinaUser);
+            utilizatoriPage.ClickActualizeazaUtilizator();
         }
     }
 }

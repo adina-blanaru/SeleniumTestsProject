@@ -13,6 +13,8 @@ namespace SeleniumTestsProject.PageObjects
 
         public IWebElement UsersTableHeader => _driver.FindElement(By.XPath("//thead"));
         private IWebElement EditIcon => _driver.FindElement(By.ClassName("fa-pencil"));
+
+        //Actualizeaza Utilizator page
         public IWebElement SubmitButton => _driver.FindElement(By.ClassName("btn-primary"));
     }
 }
