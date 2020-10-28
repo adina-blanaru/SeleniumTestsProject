@@ -89,7 +89,7 @@ namespace SeleniumTestsProject
             homePage.GoToSignUp();
 
             //Act 1
-            signUpPage.CreateAccount(User, Password);
+            signUpPage.CreateAccount("AD Demo User", User, "0744123456", "Strada mea, Brasov, Romania", Password);
             //Assert 1
             loginPage.VerifyElementContainsText(loginPage.AlertMessage, "Your account was created, now you can login.");
 

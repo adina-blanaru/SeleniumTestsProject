@@ -3,15 +3,15 @@ namespace SeleniumTestsProject.PageObjects
 {
     partial class SignUpPage
     {
-        public void CreateAccount(string email, string password)
+        public void CreateAccount(string nume, string email, string telefon, string adresa, string password)
         {
             NumeField.Click();
-            NumeField.SendKeys("AD Demo User");
+            NumeField.SendKeys(nume);
             EmailField.SendKeys(email);
-            TelefonField.SendKeys("0744123456");            
-            AdresaField.SendKeys("Strada mea, Brasov, Romania");
+            TelefonField.SendKeys(telefon);            
+            AdresaField.SendKeys(adresa);
             ParolaField.SendKeys(password);
-            RepetaParolaField.SendKeys("demo123?");
+            RepetaParolaField.SendKeys(password);
             InscriereButton.Click();
         }
 
