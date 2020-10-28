@@ -5,7 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading;
 
-namespace SeleniumTestsProject.Oct21_Tema28.PageObjects
+namespace SeleniumTestsProject.PageObjectsOct21Tema28
 {
     partial class DemoQaFormPage
     {
@@ -24,7 +24,7 @@ namespace SeleniumTestsProject.Oct21_Tema28.PageObjects
             HobbiesSportsCheckbox.Click();
 
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            ChooseFileButton.SendKeys($"{path}//Oct21_Tema28//test-img.JPG");
+            ChooseFileButton.SendKeys($"{path}//Resources//test-img.JPG");
             
             AddressFieldTextBox.SendKeys("My Street 13, zipcode 55451");
 

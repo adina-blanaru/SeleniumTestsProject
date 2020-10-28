@@ -1,5 +1,5 @@
 ﻿
-namespace SeleniumTestsProject.Oct21_Tema28.PageObjects
+namespace SeleniumTestsProject.PageObjectsOct21Tema28
 {
     partial class DemoQaTextBoxPage
     {

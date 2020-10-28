@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using SeleniumTestsProject.PageObjects;
-using System.Threading;
 
 namespace SeleniumTestsProject
 {
@@ -30,7 +29,6 @@ namespace SeleniumTestsProject
 
             //Assert
             loginPage.VerifyElementIsDisplayed(homePage.DeconectareButton);
-
         }
 
         [Test]
