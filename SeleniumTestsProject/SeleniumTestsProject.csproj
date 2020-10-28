@@ -122,6 +122,7 @@
     <Compile Include="PageObjectsOct21Tema28\GooglePage.Actions.cs" />
     <Compile Include="PageObjectsOct21Tema28\DemoQaFormPage.Locators.cs" />
     <Compile Include="PageObjectsOct21Tema28\GooglePage.Locators.cs" />
+    <Compile Include="PageObjectsOct21Tema28\UntoldPage.Locators.cs" />
     <Compile Include="PageObjects\Helper.cs" />
     <Compile Include="PageObjectsOct21Tema28\TeatruPage.Locators.cs" />
     <Compile Include="PageObjects\CartPage.Actions.cs" />
