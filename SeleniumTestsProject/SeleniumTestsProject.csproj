@@ -65,19 +65,39 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Hooks.cs" />
+    <Compile Include="PageObjectsOct21Tema28\DemoQaFormPage.Actions.cs" />
+    <Compile Include="PageObjectsOct21Tema28\DemoQaTextBoxPage.Actions.cs" />
+    <Compile Include="PageObjectsOct21Tema28\DemoQaTextBoxPage.Locators.cs" />
+    <Compile Include="PageObjectsOct21Tema28\GooglePage.Actions.cs" />
+    <Compile Include="PageObjectsOct21Tema28\DemoQaFormPage.Locators.cs" />
+    <Compile Include="PageObjectsOct21Tema28\GooglePage.Locators.cs" />
+    <Compile Include="PageObjects\Helper.cs" />
+    <Compile Include="PageObjectsOct21Tema28\TeatruPage.Locators.cs" />
+    <Compile Include="PageObjects\CartPage.Actions.cs" />
+    <Compile Include="PageObjects\CartPage.Locators.cs" />
+    <Compile Include="Tests\Oct21Tema28CasqadTests.cs" />
     <Compile Include="PageObjects\LoginPage.Actions.cs" />
     <Compile Include="PageObjects\LoginPage.Locators.cs" />
     <Compile Include="PageObjects\HomePage.Actions.cs" />
     <Compile Include="PageObjects\HomePage.Locators.cs" />
-    <Compile Include="PageObjects\InscrierePage.Locators.cs" />
-    <Compile Include="PageObjects\InscrierePage.Actions.cs" />
+    <Compile Include="PageObjects\ProductPage.Actions.cs" />
+    <Compile Include="PageObjects\ProductPage.Locators.cs" />
+    <Compile Include="PageObjects\SignUpPage.Locators.cs" />
+    <Compile Include="PageObjects\SignUpPage.Actions.cs" />
+    <Compile Include="PageObjects\UtilizatoriPage.Locators.cs" />
+    <Compile Include="PageObjects\UtilizatoriPage.Actions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="Tests\Oct21Tema28Tests.cs" />
+    <Compile Include="Tests\Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\test-img.JPG">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

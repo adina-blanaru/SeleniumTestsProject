@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using OpenQA.Selenium;
 
 namespace SeleniumTestsProject.PageObjects
 {
@@ -11,6 +8,31 @@ namespace SeleniumTestsProject.PageObjects
         public void GoToAuthentication()
         {
             AutentificareButton.Click();
+        }
+
+        public void GoToSignUp()
+        {
+            InscriereButton.Click();
+        }
+
+        public void DisconnectUser()
+        {
+            DeconectareButton.Click();
+        }
+
+        public void VeziDetaliiProdus()
+        {
+            VeziDetaliiButton.Click();
+        }
+
+        public void GoToMenu(string menuName)
+        {
+            GetMenuElement(menuName).Click();
+        }
+
+        public IWebElement GetMenuElement(string menuName)
+        {
+            return NavBar.FindElement(By.XPath($"//a[contains(text(),'{menuName}')]"));
         }
     }
 }

@@ -2,11 +2,11 @@
 
 namespace SeleniumTestsProject.PageObjects
 {
-    partial class InscrierePage
+    partial class SignUpPage
     {
         private IWebDriver _driver;
 
-        public InscrierePage(IWebDriver driver)
+        public SignUpPage(IWebDriver driver)
         {
             _driver = driver;
         }

@@ -13,6 +13,7 @@ namespace SeleniumTestsProject
         public void ValidateLoginIntoApplicationWithValidCredentials()
         {
             //Arrange
+            NavigateToUrl("http://demosite.casqad.org/");
             HomePage homePage = new HomePage(Driver);
             homePage.GoToAuthentication();
 
@@ -24,24 +25,6 @@ namespace SeleniumTestsProject
             loginPage.VerifyElementIsDisplayed(homePage.DeconectareButton);
             //Assert.IsTrue(homePage.DeconectareButton.Displayed);
 
-            Thread.Sleep(1000);
-        }
-
-        [Test]
-        public void Inscriere()
-        {
-            HomePage homePage = new HomePage(Driver);
-            InscrierePage inscrierePage = new InscrierePage(Driver);
-
-            homePage.InscriereButton.Click();
-            inscrierePage.CreateAccount();
-
-            Thread.Sleep(1000);
-        }
-
-        [Test]
-        public void MyThirdTest()
-        {
             Thread.Sleep(1000);
         }
 
