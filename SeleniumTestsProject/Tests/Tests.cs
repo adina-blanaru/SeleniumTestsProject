@@ -8,6 +8,7 @@ namespace SeleniumTestsProject
     class Tests:Hooks
     {
         //nunit3-console.exe "C:\Users\Adina\Projects\AgileHub_Testare_Automatizata\Unit Test Project\SeleniumTestsProject\SeleniumTestsProject\bin\Debug\SeleniumTestsProject.dll" --where "cat==myCat"
+        //nunit3-console.exe --testparam:Browser="Firefox" "C:\Users\.......
 
         [Test, Category("Login")]  //marks the method as a test; category can be added on test or on test fixture
         public void ValidateLoginIntoApplicationWithValidCredentials()
