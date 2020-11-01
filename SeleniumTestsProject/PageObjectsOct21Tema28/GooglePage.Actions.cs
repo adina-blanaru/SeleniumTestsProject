@@ -8,6 +8,7 @@ namespace SeleniumTestsProject.PageObjectsOct21Tema28
         {
             _driver.SwitchTo().Frame(ConsentIframe);
             AgreeButton.Click();
+            _driver.SwitchTo().DefaultContent();
         }
 
         public void GoogleSearch(string searchText)

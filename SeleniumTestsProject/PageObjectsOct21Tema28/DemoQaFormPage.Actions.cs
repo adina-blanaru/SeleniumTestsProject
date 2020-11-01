@@ -24,7 +24,7 @@ namespace SeleniumTestsProject.PageObjectsOct21Tema28
             HobbiesSportsCheckbox.Click();
 
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            ChooseFileButton.SendKeys($"{path}//Resources//test-img.JPG");
+            ChooseFileButton.SendKeys($"{path}\\Resources\\test-img.JPG");
             
             AddressFieldTextBox.SendKeys("My Street 13, zipcode 55451");
 
@@ -59,7 +59,8 @@ namespace SeleniumTestsProject.PageObjectsOct21Tema28
         private void SelectSubjectAutocompleteValue(string text)
         {
             SubjectsFieldAutocomplete.SendKeys(text);
-            SubjectsFieldAutocomplete.SendKeys(Keys.Enter);
+            Thread.Sleep(10);
+            SubjectsFieldAutocomplete.SendKeys(Keys.Tab);
         }  
 
     }

@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
 using SeleniumTestsProject.PageObjectsOct21Tema28;
 using SeleniumTestsProject.PageObjects;
 
@@ -93,11 +92,10 @@ namespace SeleniumTestsProject
             NavigateToUrl("https://untold.com/");
 
             //Act
-            IWebElement MenuButton = Driver.FindElement(By.CssSelector(".bm-burger-button button"));
-            MenuButton.Click();
-
-            IWebElement HomeMenuItem = Driver.FindElement(By.XPath("//span[text()='HOME']"));
-            HomeMenuItem.Click();
+            UntoldPage untoldPage = new UntoldPage(Driver);
+            var a = untoldPage.UntoldRadio.Displayed;  //workaround to wait for UntoldRadio to be displayed
+            untoldPage.MenuButton.Click();
+            untoldPage.HomeMenuItem.Click();
 
             //Assert
             Assert.AreEqual("https://untold.com/", Driver.Url);
