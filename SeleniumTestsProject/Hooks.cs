@@ -3,34 +3,32 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using System;
+using TechTalk.SpecFlow;
 
 namespace SeleniumTestsProject
 {
     public enum BrowserType
-    { 
+    {
         Chrome,
         Firefox
     }
-    
+
+    //[Binding]  //otherwise it creates 2 browser instances
     public class Hooks
     {
         private BrowserType _browserType;
         protected IWebDriver Driver;
 
-        [SetUp] //runs before each test
-        //[OneTimeSetUp]    //runs one time before all tests
-        public void Setup()
+        // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
+
+        [BeforeScenario]
+        public void BeforeScenario()
         {
-            var browserType = TestContext.Parameters.Get("Browser", "Chrome"); //default value if not specified when running the test from command line  
-            _browserType = (BrowserType)Enum.Parse(typeof(BrowserType), browserType); //(BrowserType) cast to BrowserType
+            var browserType = TestContext.Parameters.Get("Browser", "Chrome");  
+            _browserType = (BrowserType)Enum.Parse(typeof(BrowserType), browserType);
             ChooseDriverInstance(_browserType);
-
-            //Driver = new ChromeDriver();    //create new instance of chromdriver
-            //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-
-            Driver.Manage().Window.Maximize();  //maximize window
-            //Driver.Navigate().GoToUrl("http://demosite.casqad.org/");
-
+            Driver.Manage().Window.Maximize();
+            Driver.Navigate().GoToUrl("http://demosite.casqad.org/");
         }
 
         public void ChooseDriverInstance(BrowserType browserType)
@@ -46,16 +44,10 @@ namespace SeleniumTestsProject
             }
         }
 
-        [TearDown]
-        public void TearDown()
+        [AfterScenario]
+        public void AfterScenario()
         {
             Driver.Quit();
         }
-
-        public void NavigateToUrl(string pageUrl)
-        {
-            Driver.Navigate().GoToUrl(pageUrl);
-        }
-
     }
 }
