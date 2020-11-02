@@ -6,7 +6,7 @@ using System;
 
 namespace SeleniumTestsProject
 {
-    public enum BrowserType
+    public enum BrowserTypeOld
     { 
         Chrome,
         Firefox
