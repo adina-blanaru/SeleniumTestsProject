@@ -5,7 +5,7 @@ using System.Threading;
 namespace SeleniumTestsProject
 {
     [TestFixture]   //marks the class as a tests class
-    class Tests:Hooks
+    class Tests:HooksOld
     {
         //nunit3-console.exe "C:\Users\Adina\Projects\AgileHub_Testare_Automatizata\Unit Test Project\SeleniumTestsProject\SeleniumTestsProject\bin\Debug\SeleniumTestsProject.dll" --where "cat==myCat"
         //nunit3-console.exe --testparam:Browser="Firefox" "C:\Users\.......

@@ -5,7 +5,7 @@ namespace SeleniumTestsProject
 {
     [TestFixture]
     //6.	Navigati catre pagina http://demosite.casqad.org/.  (teste diferite pentru fiecare punct)
-    class Oct21Tema28CasqadTests : Hooks
+    class Oct21Tema28CasqadTests : HooksOld
     {
         private readonly string SiteUrl = "http://demosite.casqad.org/";
         private readonly string AdminUser = "admin.test3@gmail.com";

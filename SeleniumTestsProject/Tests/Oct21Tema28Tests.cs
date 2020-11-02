@@ -5,7 +5,7 @@ using SeleniumTestsProject.PageObjects;
 namespace SeleniumTestsProject
 {
     [TestFixture]
-    class Oct21Tema28Tests : Hooks
+    class Oct21Tema28Tests : HooksOld
     {
         //nunit3-console.exe "C:\Users\Adina\Projects\AgileHub_Testare_Automatizata\Unit Test Project\SeleniumTestsProject\SeleniumTestsProject\bin\Debug\SeleniumTestsProject.dll" --where "cat==myCat"
 

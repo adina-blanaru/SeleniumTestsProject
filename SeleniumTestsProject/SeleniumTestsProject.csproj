@@ -113,7 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hooks.cs" />
+    <Compile Include="HooksOld.cs" />
     <Compile Include="PageObjectsOct21Tema28\DemoQaFormPage.Actions.cs" />
     <Compile Include="PageObjectsOct21Tema28\DemoQaTextBoxPage.Actions.cs" />
     <Compile Include="PageObjectsOct21Tema28\DemoQaTextBoxPage.Locators.cs" />
@@ -125,7 +125,7 @@
     <Compile Include="PageObjectsOct21Tema28\TeatruPage.Locators.cs" />
     <Compile Include="PageObjects\CartPage.Actions.cs" />
     <Compile Include="PageObjects\CartPage.Locators.cs" />
-    <Compile Include="SpecFlowHooks.cs" />
+    <Compile Include="Hooks.cs" />
     <Compile Include="StepDefinitions\AuthenticationStepDefinitions.cs" />
     <Compile Include="Tests\Oct21Tema28CasqadTests.cs" />
     <Compile Include="PageObjects\LoginPage.Actions.cs" />
