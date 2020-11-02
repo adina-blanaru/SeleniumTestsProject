@@ -1,6 +1,10 @@
-﻿using TechTalk.SpecFlow;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using TechTalk.SpecFlow;
 
-namespace SeleniumTestsProject
+namespace SeleniumTestsProject.StepDefinitions
 {
     [Binding]
     public sealed class StepDefinition1
