@@ -1,7 +1,9 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumTestsProject.Dto;
 using System;
+using System.Reflection;
 
 namespace SeleniumTestsProject.PageObjects
 {
@@ -21,6 +23,30 @@ namespace SeleniumTestsProject.PageObjects
         {
             EmailFieldTextBox.SendKeys(user);
             PasswordFieldTextBox.SendKeys(password);
+            SubmitButton.Click();
+        }
+
+        public void LoginIntoApplication(UserDto user)
+        {
+            //EmailFieldTextBox.SendKeys(user.userEmail);
+            //PasswordFieldTextBox.SendKeys(user.userPassword);
+
+            //var validUser = user.GetValidUser();
+            //var userRuntimeProperties = user.GetType().GetRuntimeProperties(); //returns a collection
+            //var userProperties = user.GetType().GetProperties(); //returns an array
+            
+            var emailValue = user.GetType().GetRuntimeProperty("userEmail").GetValue(user);
+            if (emailValue != null)
+            {
+                EmailFieldTextBox.SendKeys(emailValue.ToString());
+            }
+
+            var passwordValue = user.GetType().GetRuntimeProperty("userPassword").GetValue(user);
+            if (passwordValue != null)
+            {
+                PasswordFieldTextBox.SendKeys(passwordValue.ToString());
+            }
+
             SubmitButton.Click();
         }
 
