@@ -6,8 +6,8 @@ using TechTalk.SpecFlow.Assist;
 
 namespace SeleniumTestsProject.StepDefinitions
 {
-    [Binding]  //specflow argument - indicates that this class is binded with a feature file
-    public sealed class AuthenticationSteps:Hooks
+    [Binding]  //specflow attribute - indicates that this class is binded with a feature file
+    public sealed class AuthenticationSteps : Hooks
     {
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
@@ -21,7 +21,9 @@ namespace SeleniumTestsProject.StepDefinitions
         [Given(@"I navigate to authentication page")]
         public void GivenINavigateToAuthenticationPage()
         {
+            BasePage basePage = new BasePage(Driver);
             HomePage homePage = new HomePage(Driver);
+            basePage.NavigateToUrl(basePage.CasqadUrl);
             homePage.GoToAuthentication();
         }
 

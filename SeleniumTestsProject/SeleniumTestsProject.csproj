@@ -121,12 +121,15 @@
     <Compile Include="PageObjectsOct21Tema28\DemoQaFormPage.Locators.cs" />
     <Compile Include="PageObjectsOct21Tema28\GooglePage.Locators.cs" />
     <Compile Include="PageObjectsOct21Tema28\UntoldPage.Locators.cs" />
+    <Compile Include="PageObjects\BasePage.cs" />
     <Compile Include="PageObjects\Helper.cs" />
     <Compile Include="PageObjectsOct21Tema28\TeatruPage.Locators.cs" />
     <Compile Include="PageObjects\CartPage.Actions.cs" />
     <Compile Include="PageObjects\CartPage.Locators.cs" />
     <Compile Include="Hooks.cs" />
     <Compile Include="StepDefinitions\AuthenticationSteps.cs" />
+    <Compile Include="StepDefinitions\GoogleSearchSteps.cs" />
+    <Compile Include="StepDefinitions\BaseSteps.cs" />
     <Compile Include="Tests\Oct21Tema28CasqadTests.cs" />
     <Compile Include="PageObjects\LoginPage.Actions.cs" />
     <Compile Include="PageObjects\LoginPage.Locators.cs" />
@@ -145,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\AuthenticationTests.feature" />
+    <None Include="Features\GoogleSearch.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
