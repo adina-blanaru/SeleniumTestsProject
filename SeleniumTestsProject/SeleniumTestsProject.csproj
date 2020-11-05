@@ -127,6 +127,7 @@
     <Compile Include="PageObjects\CartPage.Actions.cs" />
     <Compile Include="PageObjects\CartPage.Locators.cs" />
     <Compile Include="StepDefinitions\LoginSteps.cs" />
+    <Compile Include="StepDefinitions\StepDefinition1.cs" />
     <Compile Include="Tests\Oct21Tema28CasqadTests.cs" />
     <Compile Include="PageObjects\LoginPage.Actions.cs" />
     <Compile Include="PageObjects\LoginPage.Locators.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Tests\Tests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\SpecFlowFeature1.feature" />
     <None Include="packages.config" />
     <None Include="Features\LoginScenarios.feature" />
   </ItemGroup>
