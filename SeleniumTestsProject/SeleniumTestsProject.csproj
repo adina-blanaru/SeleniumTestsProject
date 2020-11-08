@@ -133,6 +133,8 @@
     <Compile Include="StepDefinitions\DemoQaSteps.cs" />
     <Compile Include="StepDefinitions\GoogleSearchSteps.cs" />
     <Compile Include="StepDefinitions\BaseSteps.cs" />
+    <Compile Include="StepDefinitions\TheatreShowSteps.cs" />
+    <Compile Include="StepDefinitions\UntoldSteps.cs" />
     <Compile Include="Tests\Oct21Tema28CasqadTests.cs" />
     <Compile Include="PageObjects\LoginPage.Actions.cs" />
     <Compile Include="PageObjects\LoginPage.Locators.cs" />
@@ -153,6 +155,8 @@
     <None Include="Features\AuthenticationTests.feature" />
     <None Include="Features\DemoQaTests.feature" />
     <None Include="Features\GoogleSearch.feature" />
+    <None Include="Features\TheatreShowTest.feature" />
+    <None Include="Features\UntoldTest.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
