@@ -1,15 +1,37 @@
 ﻿
+using SeleniumTestsProject.Dto;
+using System.Reflection;
+using System.Threading;
+
 namespace SeleniumTestsProject.PageObjectsOct21Tema28
 {
     partial class DemoQaTextBoxPage
     {
-        public void FillInForm()
+        public void FillInForm(DemoQaUserAddressInfoDto user)
         {
-            FullNameFieldTextBox.SendKeys("Test User Full Name");
-            EmailFieldTextBox.SendKeys("testuser@test.com");
-            CurrentAddressFieldTextBox.SendKeys("My current street 11, Brasov, Romania");
-            PermanentAddressFieldTextBox.SendKeys("My permanent street 101, Brasov, Romania");
-            SubmitButton.Click();
+            var FullNameValue = user.GetType().GetRuntimeProperty("FullName").GetValue(user);
+            if (FullNameValue != null)
+            {
+                FullNameFieldTextBox.SendKeys(FullNameValue.ToString());
+            }
+
+            var EmailValue = user.GetType().GetRuntimeProperty("Email").GetValue(user);
+            if (EmailValue != null)
+            {
+                EmailFieldTextBox.SendKeys(EmailValue.ToString());
+            }
+
+            var CurrentAddressValue = user.GetType().GetRuntimeProperty("CurrentAddress").GetValue(user);
+            if (CurrentAddressValue != null)
+            {
+                CurrentAddressFieldTextBox.SendKeys(CurrentAddressValue.ToString());
+            }
+
+            var PermanentAddressValue = user.GetType().GetRuntimeProperty("PermanentAddress").GetValue(user);
+            if (PermanentAddressValue != null)
+            {
+                PermanentAddressFieldTextBox.SendKeys(PermanentAddressValue.ToString());
+            }
         }
 
         public void SubmitForm()

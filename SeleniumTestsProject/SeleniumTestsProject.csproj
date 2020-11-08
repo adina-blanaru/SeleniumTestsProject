@@ -113,6 +113,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\DemoQaUserAddressInfoDto.cs" />
+    <Compile Include="Dto\DemoQaUserDetailsDto.cs" />
     <Compile Include="HooksOld.cs" />
     <Compile Include="PageObjectsOct21Tema28\DemoQaFormPage.Actions.cs" />
     <Compile Include="PageObjectsOct21Tema28\DemoQaTextBoxPage.Actions.cs" />
@@ -149,7 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\AuthenticationTests.feature" />
-    <None Include="Features\DemoQaPracticeForm.feature" />
+    <None Include="Features\DemoQaTests.feature" />
     <None Include="Features\GoogleSearch.feature" />
     <None Include="packages.config" />
   </ItemGroup>

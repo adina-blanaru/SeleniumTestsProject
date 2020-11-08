@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
+using SeleniumTestsProject.Dto;
 using SeleniumTestsProject.PageObjectsOct21Tema28;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
 
 namespace SeleniumTestsProject.StepDefinitions
 {
@@ -8,10 +10,11 @@ namespace SeleniumTestsProject.StepDefinitions
     public sealed class DemoQaSteps : Hooks
     {
         [When(@"I fill in the registration form")]
-        public void WhenIFillInTheRegistrationForm()
+        public void WhenIFillInTheRegistrationForm(Table table)
         {
+            var myUser = table.CreateInstance<DemoQaUserDetailsDto>();
             DemoQaFormPage demoQaFormPage = new DemoQaFormPage(Driver);
-            demoQaFormPage.FillInForm();  //TODO use table for the data
+            demoQaFormPage.FillInForm(myUser);
             demoQaFormPage.SubmitForm();
         }
 
@@ -23,10 +26,11 @@ namespace SeleniumTestsProject.StepDefinitions
         }
 
         [When(@"I fill in the text box form")]
-        public void WhenIFillInTheTextBoxForm()
+        public void WhenIFillInTheTextBoxForm(Table table)
         {
+            var myUser = table.CreateInstance<DemoQaUserAddressInfoDto>();
             DemoQaTextBoxPage demoQaTextBoxPage = new DemoQaTextBoxPage(Driver);
-            demoQaTextBoxPage.FillInForm();  //TODO use table for the data
+            demoQaTextBoxPage.FillInForm(myUser);
             demoQaTextBoxPage.SubmitForm();
         }
 
