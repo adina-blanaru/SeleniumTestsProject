@@ -2,14 +2,14 @@
 
 namespace SeleniumTestsProject.PageObjects
 {
-    class BasePage
+    class BasePage : BaseDriver
     {
         public readonly string CasqadUrl = "http://demosite.casqad.org/";
         private IWebDriver _driver;
-
-        public BasePage(IWebDriver driver)
+        
+        public BasePage()
         {
-            _driver = driver;
+            _driver = Driver;
         }
 
         public void NavigateToUrl(string pageUrl)

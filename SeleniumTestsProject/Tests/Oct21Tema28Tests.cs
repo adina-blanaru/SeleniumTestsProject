@@ -16,7 +16,7 @@ namespace SeleniumTestsProject
         {      
             //Arrange
             NavigateToUrl("https://www.google.com/");
-            GooglePage googlePage = new GooglePage(Driver);
+            GooglePage googlePage = new GooglePage();
             googlePage.AcceptTerms();
 
             //Act 1

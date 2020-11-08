@@ -2,14 +2,15 @@
 
 namespace SeleniumTestsProject.PageObjectsOct21Tema28
 {
-    partial class GooglePage
+    partial class GooglePage : BaseDriver
     {
         private IWebDriver _driver;
-        public GooglePage(IWebDriver driver)
+
+        public GooglePage()
         {
-            _driver = driver;
+            _driver = Driver;
         }
-        
+
         //consent dialog
         private IWebElement ConsentIframe => _driver.FindElement(By.CssSelector("iframe"));
         private IWebElement AgreeButton => _driver.FindElement(By.Id("introAgreeButton"));

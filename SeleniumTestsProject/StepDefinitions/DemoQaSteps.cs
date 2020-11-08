@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 namespace SeleniumTestsProject.StepDefinitions
 {
     [Binding]
-    public sealed class DemoQaSteps : Hooks
+    public sealed class DemoQaSteps : BaseDriver
     {
         [When(@"I fill in the registration form")]
         public void WhenIFillInTheRegistrationForm()

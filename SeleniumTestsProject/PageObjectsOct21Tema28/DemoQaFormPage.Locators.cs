@@ -2,12 +2,12 @@
 
 namespace SeleniumTestsProject.PageObjectsOct21Tema28
 {
-    partial class DemoQaFormPage
+    partial class DemoQaFormPage : BaseDriver
     {
         private IWebDriver _driver;
         public DemoQaFormPage(IWebDriver driver)
         {
-            _driver = driver;
+            _driver = Driver;
         }
 
         private IWebElement FirstNameFieldTextBox => _driver.FindElement(By.Id("firstName"));

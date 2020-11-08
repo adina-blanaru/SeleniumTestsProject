@@ -7,13 +7,13 @@ using TechTalk.SpecFlow;
 namespace SeleniumTestsProject.StepDefinitions
 {
     [Binding]
-    public class GoogleSearchSteps : Hooks
+    public class GoogleSearchSteps
     {
         [Given(@"I go to Google website")]
         public void GivenIGoToGoogleWebsite()
         {
-            BasePage basePage = new BasePage(Driver);
-            GooglePage googlePage = new GooglePage(Driver);
+            BasePage basePage = new BasePage();
+            GooglePage googlePage = new GooglePage();
 
             basePage.NavigateToUrl("https://www.google.com/");
             googlePage.AcceptTerms();
@@ -22,14 +22,14 @@ namespace SeleniumTestsProject.StepDefinitions
         [When(@"I search for '(.*)'")]
         public void WhenISearchFor(string searchText)
         {
-            GooglePage googlePage = new GooglePage(Driver);
+            GooglePage googlePage = new GooglePage();
             googlePage.GoogleSearch(searchText);
         }
 
         [Then(@"I should be able to expand the first image")]
         public void ThenIShouldBeAbleToExpandTheFirstImage()
         {
-            GooglePage googlePage = new GooglePage(Driver);
+            GooglePage googlePage = new GooglePage();
             googlePage.ClickFirstResultFromImages();
             Assert.IsTrue(googlePage.IsImagePanelDisplayed());
         }
@@ -37,7 +37,7 @@ namespace SeleniumTestsProject.StepDefinitions
         [Then(@"Return to the results page")]
         public void ThenReturnToTheResultsPage()
         {
-            GooglePage googlePage = new GooglePage(Driver);
+            GooglePage googlePage = new GooglePage();
             googlePage.ReturnToImages();
             Assert.IsFalse(googlePage.IsImagePanelDisplayed());
         }
