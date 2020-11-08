@@ -1,14 +1,12 @@
-﻿using Gherkin;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumTestsProject.Dto;
-using SeleniumTestsProject.PageObjects;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading;
 
-namespace SeleniumTestsProject.PageObjectsOct21Tema28
+namespace SeleniumTestsProject.PageObjects.Misc
 {
     partial class DemoQaFormPage
     {

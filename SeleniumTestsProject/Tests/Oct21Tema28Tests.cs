@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using SeleniumTestsProject.PageObjectsOct21Tema28;
+using SeleniumTestsProject.PageObjects.Misc;
 using SeleniumTestsProject.PageObjects;
 using SeleniumTestsProject.Dto;
 

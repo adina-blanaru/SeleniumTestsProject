@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using SeleniumTestsProject.Dto;
-using SeleniumTestsProject.PageObjectsOct21Tema28;
+using SeleniumTestsProject.PageObjects.Misc;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 

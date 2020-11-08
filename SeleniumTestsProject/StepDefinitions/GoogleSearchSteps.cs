@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using SeleniumTestsProject.PageObjects;
-using SeleniumTestsProject.PageObjectsOct21Tema28;
+using SeleniumTestsProject.PageObjects.Misc;
 using TechTalk.SpecFlow;
 
 namespace SeleniumTestsProject.StepDefinitions

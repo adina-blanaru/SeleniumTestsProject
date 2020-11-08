@@ -116,16 +116,16 @@
     <Compile Include="Dto\DemoQaUserAddressInfoDto.cs" />
     <Compile Include="Dto\DemoQaUserDetailsDto.cs" />
     <Compile Include="HooksOld.cs" />
-    <Compile Include="PageObjectsOct21Tema28\DemoQaFormPage.Actions.cs" />
-    <Compile Include="PageObjectsOct21Tema28\DemoQaTextBoxPage.Actions.cs" />
-    <Compile Include="PageObjectsOct21Tema28\DemoQaTextBoxPage.Locators.cs" />
-    <Compile Include="PageObjectsOct21Tema28\GooglePage.Actions.cs" />
-    <Compile Include="PageObjectsOct21Tema28\DemoQaFormPage.Locators.cs" />
-    <Compile Include="PageObjectsOct21Tema28\GooglePage.Locators.cs" />
-    <Compile Include="PageObjectsOct21Tema28\UntoldPage.Locators.cs" />
+    <Compile Include="PageObjects\Misc\DemoQaFormPage.Actions.cs" />
+    <Compile Include="PageObjects\Misc\DemoQaTextBoxPage.Actions.cs" />
+    <Compile Include="PageObjects\Misc\DemoQaTextBoxPage.Locators.cs" />
+    <Compile Include="PageObjects\Misc\GooglePage.Actions.cs" />
+    <Compile Include="PageObjects\Misc\DemoQaFormPage.Locators.cs" />
+    <Compile Include="PageObjects\Misc\GooglePage.Locators.cs" />
+    <Compile Include="PageObjects\Misc\UntoldPage.Locators.cs" />
     <Compile Include="PageObjects\BasePage.cs" />
     <Compile Include="PageObjects\Helper.cs" />
-    <Compile Include="PageObjectsOct21Tema28\TeatruPage.Locators.cs" />
+    <Compile Include="PageObjects\Misc\TeatruPage.Locators.cs" />
     <Compile Include="PageObjects\CartPage.Actions.cs" />
     <Compile Include="PageObjects\CartPage.Locators.cs" />
     <Compile Include="Hooks.cs" />
@@ -164,7 +164,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PageObjectsOct21Tema28\" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
