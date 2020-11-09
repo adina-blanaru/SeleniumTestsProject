@@ -13,22 +13,25 @@ namespace SeleniumTestsProject
         Firefox
     }
 
-    //[Binding]  //otherwise it creates 2 browser instances
+    [Binding]  //otherwise it creates 2 browser instances
     public class Hooks
     {
         private BrowserType _browserType;
-        protected IWebDriver Driver;
+        protected static IWebDriver Driver;
 
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
         [BeforeScenario]
         public void BeforeScenario()
         {
-            var browserType = TestContext.Parameters.Get("Browser", "Chrome");  
+            var browserType = TestContext.Parameters.Get("Browser", "Chrome");
             _browserType = (BrowserType)Enum.Parse(typeof(BrowserType), browserType);
-            ChooseDriverInstance(_browserType);
-            Driver.Manage().Window.Maximize();
-            Driver.Navigate().GoToUrl("http://demosite.casqad.org/");
+            if (Driver is null)
+            {
+                ChooseDriverInstance(_browserType);
+                Driver.Manage().Window.Maximize();
+            }
+            //Driver.Navigate().GoToUrl("http://demosite.casqad.org/");
         }
 
         public void ChooseDriverInstance(BrowserType browserType)
@@ -47,7 +50,11 @@ namespace SeleniumTestsProject
         [AfterScenario]
         public void AfterScenario()
         {
-            Driver.Quit();
+            if (!(Driver is null))
+            {
+                Driver.Quit();
+                Driver = null;
+            }
         }
     }
 }

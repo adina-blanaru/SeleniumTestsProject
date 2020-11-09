@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
-using SeleniumTestsProject.PageObjectsOct21Tema28;
+using SeleniumTestsProject.PageObjects.Misc;
 using SeleniumTestsProject.PageObjects;
+using SeleniumTestsProject.Dto;
 
 namespace SeleniumTestsProject
 {
@@ -40,7 +41,22 @@ namespace SeleniumTestsProject
 
             //Act
             DemoQaFormPage demoQaFormPage = new DemoQaFormPage(Driver);
-            demoQaFormPage.FillInForm();
+            var myUser = new DemoQaUserDetailsDto
+            {
+                FirstName = "Test First Name",
+                LastName = "Test Last Name", 
+                Email = "testuser@test.com", 
+                Gender = "Female",
+                MobilePhone = "4123456789",
+                DateOfBirth = "03/12/1970",
+                Subjects = "Maths, Arts, English", 
+                Hobbies = "Sports, Music",
+                PictureName = "test-img.JPG", 
+                CurrentAddress = "My current street 11, BV, RO",
+                State = "Haryana",
+                City = "Panipat"
+            };
+            demoQaFormPage.FillInForm(myUser);
             demoQaFormPage.SubmitForm();
 
             //Assert
@@ -56,7 +72,14 @@ namespace SeleniumTestsProject
 
             //Act
             DemoQaTextBoxPage demoQaTextBoxPage = new DemoQaTextBoxPage(Driver);
-            demoQaTextBoxPage.FillInForm();
+            var myUser = new DemoQaUserAddressInfoDto
+            {
+                FullName = "Test User Full Name",
+                Email = "testuser@test.com",
+                CurrentAddress = "My current street 11, BV, RO",
+                PermanentAddress = "My permanent street 13, BV, RO"
+            };
+            demoQaTextBoxPage.FillInForm(myUser);
             demoQaTextBoxPage.SubmitForm();
 
             //Assert

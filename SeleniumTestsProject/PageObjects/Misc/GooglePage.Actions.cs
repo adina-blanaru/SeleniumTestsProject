@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace SeleniumTestsProject.PageObjectsOct21Tema28
+namespace SeleniumTestsProject.PageObjects.Misc
 {
     partial class GooglePage
     {

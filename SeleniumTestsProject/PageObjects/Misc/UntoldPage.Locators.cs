@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using System;
 
-namespace SeleniumTestsProject.PageObjectsOct21Tema28
+namespace SeleniumTestsProject.PageObjects.Misc
 {
     partial class UntoldPage
     {

@@ -10,6 +10,7 @@
 #		And password 'password123'
 #	Then I am logged in
 
+#a.	Logati-va in aplicatie.
 @LoginUsingDto
 Scenario: ValidateLoginUsingDto
 	Given I navigate to authentication page
