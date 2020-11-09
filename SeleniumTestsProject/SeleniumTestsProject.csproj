@@ -115,6 +115,7 @@
   <ItemGroup>
     <Compile Include="Dto\DemoQaUserAddressInfoDto.cs" />
     <Compile Include="Dto\DemoQaUserDetailsDto.cs" />
+    <Compile Include="Dto\UserInfoDto.cs" />
     <Compile Include="HooksOld.cs" />
     <Compile Include="PageObjects\Misc\DemoQaFormPage.Actions.cs" />
     <Compile Include="PageObjects\Misc\DemoQaTextBoxPage.Actions.cs" />
@@ -129,6 +130,9 @@
     <Compile Include="PageObjects\CartPage.Actions.cs" />
     <Compile Include="PageObjects\CartPage.Locators.cs" />
     <Compile Include="Hooks.cs" />
+    <Compile Include="StepDefinitions\CartSteps.cs" />
+    <Compile Include="StepDefinitions\AdministrationSteps.cs" />
+    <Compile Include="StepDefinitions\NavigationSteps.cs" />
     <Compile Include="StepDefinitions\AuthenticationSteps.cs" />
     <Compile Include="StepDefinitions\DemoQaSteps.cs" />
     <Compile Include="StepDefinitions\GoogleSearchSteps.cs" />
@@ -152,7 +156,10 @@
     <Compile Include="Dto\UserDto.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\NewUserTests.feature" />
+    <None Include="Features\AdministrationTests.feature" />
     <None Include="Features\AuthenticationTests.feature" />
+    <None Include="Features\AddToCartTests.feature" />
     <None Include="Features\DemoQaTests.feature" />
     <None Include="Features\GoogleSearch.feature" />
     <None Include="Features\TheatreShowTest.feature" />

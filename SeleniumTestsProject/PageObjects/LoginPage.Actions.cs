@@ -38,7 +38,14 @@ namespace SeleniumTestsProject.PageObjects
             var emailValue = user.GetType().GetRuntimeProperty("userEmail").GetValue(user);
             if (emailValue != null)
             {
-                EmailFieldTextBox.SendKeys(emailValue.ToString());
+                if (emailValue.Equals("NewUniqueEmail"))
+                {
+                    EmailFieldTextBox.SendKeys(SignUpPage.NewUniqueEmail);
+                }
+                else
+                {
+                    EmailFieldTextBox.SendKeys(emailValue.ToString());
+                }
             }
 
             var passwordValue = user.GetType().GetRuntimeProperty("userPassword").GetValue(user);
