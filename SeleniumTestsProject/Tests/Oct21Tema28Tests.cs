@@ -33,6 +33,28 @@ namespace SeleniumTestsProject
         }
 
         [Test]
+        //Navigati pe https://www.google.com/. Scrieti in campul de search “paris” si apasati pe butonul Google Search. 
+        //Selectati “Images” din optiuni. Selectati prima imagine gasita.  Dati Back catre pagina cu imagini.
+        public void GoogleSearchExerciseJson()
+        {
+            //Arrange
+            NavigateToUrl(TestObject.Input);
+            GooglePage googlePage = new GooglePage(Driver);
+            googlePage.AcceptTerms();
+
+            //Act 1
+            googlePage.GoogleSearch(TestObject.Others);
+            googlePage.ClickFirstResultFromImages();
+            //Assert 1
+            Assert.IsTrue(googlePage.IsImagePanelDisplayed());
+
+            //Act 2
+            googlePage.ReturnToImages();
+            //Assert 2
+            Assert.IsFalse(googlePage.IsImagePanelDisplayed());
+        }
+
+        [Test]
         //Navigati catre pagina https://demoqa.com/automation-practice-form. Completati TOATE campurile si apasati pe butonul de Submit.
         public void AutomationPracticeFormExercise()
         {

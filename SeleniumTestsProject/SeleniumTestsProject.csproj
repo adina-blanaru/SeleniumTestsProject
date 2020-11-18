@@ -54,6 +54,9 @@
     <Reference Include="Google.Protobuf, Version=3.7.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.7.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -139,6 +142,7 @@
     <Compile Include="StepDefinitions\BaseSteps.cs" />
     <Compile Include="StepDefinitions\TheatreShowSteps.cs" />
     <Compile Include="StepDefinitions\UntoldSteps.cs" />
+    <Compile Include="TestData\MyTestData.cs" />
     <Compile Include="Tests\Oct21Tema28CasqadTests.cs" />
     <Compile Include="PageObjects\LoginPage.Actions.cs" />
     <Compile Include="PageObjects\LoginPage.Locators.cs" />
@@ -165,6 +169,7 @@
     <None Include="Features\TheatreShowTest.feature" />
     <None Include="Features\UntoldTest.feature" />
     <None Include="packages.config" />
+    <None Include="TestData\MyTestDataJson.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\test-img.JPG">

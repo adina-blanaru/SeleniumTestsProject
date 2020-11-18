@@ -1,0 +1,21 @@
+{
+  "ScenarioDto": [
+    {
+      "TestCaseName": "GoogleSearchExerciseJson",
+      "Input": "https://www.google.com/",
+      "Others": "paris"
+    },
+    {
+      "TestCaseName": "VerifyScenrio2",
+      "Input": "my 2nd input",
+      "Others": "other information 2"
+    },
+    {
+      "TestCaseName": "VerifyScenrio3",
+      "Input": "my 3rd input",
+      "Others": "other information 3"
+    }
+  ]
+
+
+}

@@ -2,7 +2,9 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using SeleniumTestsProject.TestData;
 using System;
+using System.Linq;
 
 namespace SeleniumTestsProject
 {
@@ -16,6 +18,7 @@ namespace SeleniumTestsProject
     {
         private BrowserType _browserType;
         protected IWebDriver Driver;
+        protected MyTestData TestObject;
 
         [SetUp] //runs before each test
         //[OneTimeSetUp]    //runs one time before all tests
@@ -31,6 +34,8 @@ namespace SeleniumTestsProject
             Driver.Manage().Window.Maximize();  //maximize window
             //Driver.Navigate().GoToUrl("http://demosite.casqad.org/");
 
+            TestObject = MyTestData.LoadTestDataFromFile()
+                .First(obj => obj.TestCaseName == TestContext.CurrentContext.Test.MethodName);
         }
 
         public void ChooseDriverInstance(BrowserType browserType)
